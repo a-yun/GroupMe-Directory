@@ -1,4 +1,5 @@
 import web
+import cgi
 from pymongo import MongoClient
 
 urls = (
@@ -9,6 +10,7 @@ app = web.application(urls, globals())
 
 client = MongoClient()
 db = client.urls
+urls = db.urls
 post = {"url" : "http://www.google.com"}
 post_id = db.urls.insert_one(post)
 print post_id, "???"
