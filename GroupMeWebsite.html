@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style type="text/css">
+            label {
+                font: normal 12px courier !important;
+            }
+        h4{
+        margin: 5px;
+        }
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>Welcome To The GroupMe Directory</h1>
+  </div>
+
+  <div data-role="main" class="ui-content" style ="text-align:center">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Add GroupMe Information</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px; min-height:400px;">
+      <form method="post" action="demoform.asp">
+        <div>
+          <h3>GroupMe Information</h3>
+          <input type="text" name="grpname" id="grpname" placeholder="Group Name">
+          <input type="url" name="url" id="url" placeholder="URL">
+          <textarea name="comment" form="usrform"> Enter description here...</textarea>
+          <h4>Tags</h4>
+          <label for="Class 2020">Class of 2020</label>
+          <input type="checkbox" name="2020" id="Class 2020" value="1" data-     mini="true">
+          <label for="Class 2019">Class of 2019</label>
+          <input type="checkbox" name="2019" id="Class 2019" value="1" data-     mini="true">
+          <label for="Class 2018">Class of 2018</label>
+          <input type="checkbox" name="2018" id="Class 2018" value="1" data-     mini="true">
+          <label for="Class 2017">Class of 2017</label>
+          <input type="checkbox" name="2017" id="Class 2017" value="1" data-     mini="true">
+          <label for="CS">Computer Science</label>
+          <input type="checkbox" name="CS" id="CS" value="1" data-     mini="true">
+          <label for="CNS">Natural Sciences</label>
+          <input type="checkbox" name="CNS" id="CNS" value="1" data-     mini="true">
+          <label for="Eng">Engineering</label>
+          <input type="checkbox" name="Engineer" id="Eng" value="1" data-     mini="true">
+          <label for="Bus">Business</label>
+          <input type="checkbox" name="Business" id="Bus" value="1" data-     mini="true">
+          <label for="LA">Liberal Arts</label>
+          <input type="checkbox" name="Liberal" id="LA" value="1" data-     mini="true">
+          <label for="Music">Music</label>
+          <input type="checkbox" name="Music" id="Music" value="1" data-     mini="true">
+          <label for="Honors">Honors</label>
+          <input type="checkbox" name="Honors" id="Honors" value="1" data-     mini="true">
+          <label for="Party">Party</label>
+          <input type="checkbox" name="Party" id="Party" value="1" data-     mini="true">
+          <label for="Academic">Academic</label>
+          <input type="checkbox" name="Academic" id="Academic" value="1" data-     mini="true">
+          <label for="Residential">Residential</label>
+          <input type="checkbox" name="Residential" id="Residential" value="1" data-     mini="true">
+          <label for="Religious">Religious</label>
+          <input type="checkbox" name="Religious" id="Religious" value="1" data-     mini="true">
+           <label for="Athletic">Athletic</label>
+          <input type="checkbox" name="Athletic" id="Athletic" value="1" data-     mini="true">
+           <div>
+          
+          <input type="submit" data-inline="true" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
