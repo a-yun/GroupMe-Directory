@@ -69,17 +69,11 @@
 						<input type="checkbox" name="Athletic" id="Athletic" value="1" data- mini="true">
 						<div>
 
-							<input type="submit" data-inline="true" value="Submit">
+							<input type="submit" data-inline="true" value="Submit" id="submitbutton">
 						</div>
 				</form>
 				</div>
 			</div>
-
-			<div data-role="footer">
-				<h1>Footer Text</h1>
-			</div>
-
-			<input type="submit" data-inline="true" value="Submit">
 		</div>
 
 		<div data-role="footer">
@@ -93,10 +87,33 @@
 				<input type="submit" data-inline="true" value="Search">
 			</div>
 		</form>
-
-		<img src="http://www.cs.utexas.edu/~rjchee/wordstemp.gif">
+		<table id="groupList">
+			<tr>
+				<th style="width:120px" text-align="left">Name</th>
+				<th style="width:270px" text-align="left">Description</th>
+				<th style="width: 20px" text-align="left">Tags</th>
+			</tr>
+		</table>
+		<img src="http://www.cs.utexas.edu/~rjchee/wordstemp.gif" style="vertical-align:middle"></img>
 	</div>
+<script type="text/javascript">
+function addGroup(data) {
+  var grpName = data["name"]
+  var descr = data["description"]
+  var tags = data["tags"]
+  var table = document.getElementById("groupList");
+  
 
+  var numRows = table.rows.length;
+  var row = table.insertRow(numRows);
+
+  row.insertCell(0).innerHTML = grpName
+  row.insertCell(1).innerHTML = descr
+  row.insertCell(2).innerHTML = tags
+}
+var insert = {name:"boggle", description:"haha nopoe", tags:["A", "b"]};
+document.getElementById("submitbutton").onclick=function(){addGroup(insert)};
+</script>
 </body>
 
 </html>
